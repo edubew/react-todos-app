@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { MdDeleteSweep } from "react-icons/md";
-import { TiEdit } from "react-icons/ti";
-import InputTodo from "./InputTodo";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { MdDeleteSweep } from 'react-icons/md';
+import { TiEdit } from 'react-icons/ti';
+import InputTodo from './InputTodo';
 
-const TodoItem = ({ todos, completeTodo, removeTodo, updateTodo }) => {
+const TodoItem = ({
+  todos, completeTodo, removeTodo, updateTodo,
+}) => {
   const [edit, setEdit] = useState({
     id: null,
-    value: "",
+    value: '',
   });
 
   const submitUpdate = (value) => {
     updateTodo(edit.id, value);
     setEdit({
       id: null,
-      value: "",
+      value: '',
     });
   };
 
@@ -24,7 +26,7 @@ const TodoItem = ({ todos, completeTodo, removeTodo, updateTodo }) => {
 
   return todos.map((todo, index) => (
     <li
-      className={todo.isComplete ? "todo__completed" : "todo__row"}
+      className={todo.isComplete ? 'todo__completed' : 'todo__row'}
       // eslint-disable-next-line react/no-array-index-key
       key={index}
     >
@@ -54,7 +56,7 @@ TodoItem.propTypes = {
       id: PropTypes.string,
       title: PropTypes.string,
       completed: PropTypes.bool,
-    })
+    }),
   ).isRequired,
   completeTodo: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import InputTodo from "./InputTodo";
-import TodoItem from "./TodoItem";
+import React, { useState } from 'react';
+import InputTodo from './InputTodo';
+import TodoItem from './TodoItem';
 
-const TodosList = () => {
+const TodoList = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
@@ -25,9 +25,7 @@ const TodosList = () => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
-    setTodos((prev) =>
-      prev.map((item) => (item.id === todoId ? newValue : item))
-    );
+    setTodos((prev) => prev.map((item) => (item.id === todoId ? newValue : item)));
   };
 
   const completeTodo = (id) => {
@@ -56,4 +54,4 @@ const TodosList = () => {
   );
 };
 
-export default TodosList;
+export default TodoList;

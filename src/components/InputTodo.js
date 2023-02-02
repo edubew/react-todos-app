@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 const InputTodo = (props) => {
   const { edit, onSubmit } = props;
-  const [input, setInput] = useState(edit ? edit.value : "");
+  const [input, setInput] = useState(edit ? edit.value : '');
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -17,7 +17,7 @@ const InputTodo = (props) => {
       text: input,
     });
 
-    setInput("");
+    setInput('');
   };
 
   return (
