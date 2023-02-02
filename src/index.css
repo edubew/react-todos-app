@@ -1,13 +1,97 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #010216;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todos__container {
+  background: #051524;
+  margin: 20%;
+  border-radius: 1rem;
+  height: 70vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 1.5rem 2rem;
+}
+
+header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e9abb1;
+}
+
+.todo__form {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.6rem;
+  width: 68%;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #f37481;
+  font-style: italic;
+  background: transparent;
+}
+
+button {
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+}
+
+.add__button {
+  color: #010216;
+  background: #c35155;
+  padding: 0.6rem;
+}
+
+.edit__button {
+  color: #010216;
+  background: #e29193;
+  padding: 8px;
+}
+
+li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border: 1px solid #fda;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  width: 60%;
+  margin: 1.8% 2%;
+  color: #fda;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.todo__icons {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.todo__completed {
+  background: #c35155;
+  text-decoration: line-through;
+  font-style: oblique;
+  font-weight: 400;
+  color: #000;
 }
